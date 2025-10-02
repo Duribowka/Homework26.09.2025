@@ -17,11 +17,11 @@ int main(int argc, char** argv){
         else{
             numcount++;
             sum = sum + atoi(argv[i]);
-            if (atoi(argv[i]) > atoi(argv[i-1])){
-                min = atoi(argv[i-1]);
+            if (atoi(argv[i]) < min){
+                min = atoi(argv[i]);
             }
-            if (atoi(argv[i]) < atoi(argv[i-1])){
-                max = atoi(argv[i-1]);
+            if (atoi(argv[i]) > max){
+                max = atoi(argv[i]);
             }
         }
     }

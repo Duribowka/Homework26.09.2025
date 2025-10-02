@@ -1,17 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "integer_calculations.h"
 
 int main(int argc, char** argv){
 
     int result;
 
-    if (argv[2][0] == '+'){
+    result = math_operation(argv[1], argv[2], argv[3]);
 
-        result = atoi(argv[1]) + atoi(argv[3]);
-        printf("Result = %d\n", result);
-    }
-
-    else if (argv[2][0] == '-'){
+    /*if (argv[2][0] == '-'){
 
         result = atoi(argv[1]) - atoi(argv[3]);
         printf("Result = %d\n", result);
@@ -29,7 +24,9 @@ int main(int argc, char** argv){
         printf("Result = %d\n", result);
     }
 
-    else{printf("Wrong input...\n");}
+    else{printf("Wrong input...\n");}*/
+
+    printf("Result = %d\n", result);
 
     return 0;
 }

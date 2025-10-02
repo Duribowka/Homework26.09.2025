@@ -1,5 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "string_calculations.h"
 
 int main(int argc, char** argv){
 
@@ -11,22 +10,16 @@ int main(int argc, char** argv){
     int j = 0;
 
     for (int i = 1; i<argc; i++){
-        int chars = 0;
+        
         if (argv[i][0] != '-'){
 
-            for (j = 0; argv[i][j] != 0; j++){
-                
-                if (argv[i][j] - '0' > 9 || argv[i][j] - '0' < 0){
-                    strCount++;
-                    chars = 1;
-                    break;
-                }
-
+            if (is_string(argv, i) == 1){
+                strCount++;
             }
-
-            if (chars == 0){
+            else{
                 intCount++;
             }
+
         }
         else if (argv[i][1] == '-'){
             keyCount++;
@@ -40,14 +33,10 @@ int main(int argc, char** argv){
     // PART 2
 
     int *intArray = (int*)malloc(sizeof(int)*intCount);
-
     char **strArray = (char**)malloc(sizeof(char*) * strCount);
-
     char **flgArray = (char**)malloc(sizeof(char*) * flgCount);
-
     char **keyArray = (char**)malloc(sizeof(char*) * keyCount);
-
-    int ii; int si; int fi; int ki;
+    int ii = 0; int si = 0; int fi = 0; int ki = 0;
 
     j = 0;
     
@@ -55,19 +44,13 @@ int main(int argc, char** argv){
         int chars = 0;
         if (argv[i][0] != '-'){
 
-            for (j = 0; argv[i][j] != 0; j++){
-                
-                if (argv[i][j] - '0' > 9 || argv[i][j] - '0' < 0){
-                    strArray[si] = argv[i];
-                    si++;
-                    chars = 1;
-                    break;
-                }
+            if (is_string(argv, i) == 1){
 
+                strArray[si] = argv[i];
+                si++;
             }
-
-            if (chars == 0){
-                intArray[ii] = atoi(argv[i]);
+            else{
+                intArray[ii] == atoi(argv[i]);
                 ii++;
             }
         }   

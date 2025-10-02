@@ -35,15 +35,33 @@ output: Wrong input...
 
 This program calculates sum of all "number" arguments.
 
+***examples:
+
+input: ./task32.o 55 30 1
+output: Sum of all number = 86
+
+input: ./task32.o 3 three 3
+output: three is not a number!
+        Sum of all number = 6
+
 --- task33.c ---
 
 An extension of task3.2. This program also calculates average of all numbers, minimum of all numbers and maximum of all numbers.
+
+***examples:
+
+input: ./task33.o 4 20 three 5
+output: three is not a number!
+        Sum of all number = 29
+        Average = 9
+        Minimum = 4
+        Maximum = 20
 
 --- task41.c ---
 
 This program counts characters of each word as well as it counts all characters in total.
 
-***example
+***examples:
 
 input: ./task41.o word hello
 output: 
@@ -54,6 +72,12 @@ output:
 --- task43.c ---
 
 This program finds word that user entered first in the rest of text.
+
+***examples:
+
+input: ./task43.o cat abobus is a very nice cat I love cat
+output: I found 'cat' at 7-th position
+        I found 'cat' at 10-th position
 
 --- task51.c ---
 
