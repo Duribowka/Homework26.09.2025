@@ -1,4 +1,5 @@
-#include "string_calculations.h"
+#include "../headers/string_calculations.h"
+#include "../headers/integer_calculations.h"
 
 int main(int argc, char** argv){
 
