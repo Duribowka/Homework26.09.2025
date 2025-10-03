@@ -32,3 +32,6 @@ task54:
 
 task61:
 	$(CC) task61.c src/*.c -o task61.o -I headers
+
+task22:
+	$(CC) task22.c src/*.c -o task22.o -I headers

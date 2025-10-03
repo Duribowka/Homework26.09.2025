@@ -4,4 +4,4 @@
 
 int is_string(char** argv, int i);
 
-//int is_same(char** argv, char flag);
+int is_same(char** argv, char flag);
