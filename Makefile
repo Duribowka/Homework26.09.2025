@@ -35,3 +35,10 @@ task61:
 
 task22:
 	$(CC) task22.c src/*.c -o task22.o -I headers
+
+task62:
+	$(CC) task62.c src/*.c -o task62.o -I headers
+
+.PHONY: clean
+clean:
+	rm -f *.o
